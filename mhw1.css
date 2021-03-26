@@ -1,0 +1,413 @@
+/*--------------------------------------
+GENERALI
+--------------------------------------*/
+html,body
+{
+   height: 100%;
+}
+
+body
+{
+  background-color: AntiqueWhite;
+  font-family: Roboto, Montserrat;
+}
+
+html
+{
+  background-color: Wheat;
+}
+
+p
+{
+  line-height: 22px; /*stiamo modificando l'interlinea di tutti i tag <p>*/
+}
+
+body p
+{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-family: Roboto, Montserrat;
+  font-size: 111%;
+}
+
+/*--------------------------------------
+HEADER
+--------------------------------------*/
+.header
+{
+  width: 100%;
+  background-color: DarkGoldenRod;
+  font-family: Montserrat, Roboto;
+  font-size: 90%
+}
+
+.header_logo
+{
+  color: #fff; /*bianco*/
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+}
+
+.header_icon-menu
+{
+  display: inline-flex;
+  margin: 0;
+  padding: 10px;
+
+}
+
+#header_menu-flex_container /* Contenitore Flex = header_menu*/
+{
+  margin: 0px;
+  display: flex;
+  padding: 30px; /*spazio header*/
+  height: 50px;
+  justify-content: flex-end;
+}
+
+.header_menu_item /* Figli del Contenitore Flex*/
+{
+  position: static;
+  padding: 0px 25px 0px 25px;
+  display: flex;
+  font-size: 155%;
+}
+
+/* SELETTORE DISCENDENTE:
+ -"Seleziona gli elementi <a> della classe .header_menu_item"
+*/
+.header_menu_item a
+{
+  height: 25px;
+  /*border: 2px solid green;*/
+  color: #8B4513;/*Saddle brown*/
+  padding: 0px;
+  text-decoration: none;
+}
+
+/* Stile quando si passa il mouse su un link*/
+.header_menu_item a:hover
+{
+  background: Wheat;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.header_icon-menu
+{
+  display: block;
+  float: right;
+  padding: 20px;
+  position: relative;
+  bottom: -50px;
+  display: none; /* lo renderemo visibile solo per la versione mobile*/
+}
+
+.header_icon-menu span
+{
+  display: block;
+  height:3px;
+  width:30px;
+  background: #fff;
+  margin-bottom: 5px;
+}
+
+/*--------------------------------------
+COVER
+--------------------------------------*/
+.cover /* il grande contenitore della nostra immagine di sfondo*/
+{
+  height: 70%;
+  width: 100%;
+  /*border: 2px solid red; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  background-image: url(https://source.unsplash.com/category/buildings);
+  background-size: cover;
+  position: relative;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+}
+
+#overlay /*effetto contrasto*/
+{
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  top:0;
+  bottom:0;
+  height:100%;
+  width:100%;
+}
+
+.cover_caption /*contenitore delle scritte centrali*/
+{
+  display: table;
+  height:100%;
+  width:100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cover_copy
+{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-family: Roboto, Montserrat;
+  font-size: 150%;
+}
+
+.cover_copy a /*In questo blocco modifico lo stile e le caratteristiche
+del LINK del tag <a> contenuto in .cover_copy grazie al SELETTORE DISCENDENTE
+Questo blocco fa riferimento al bottone al centro della pagina.*/
+{
+  border-radius: 15px;
+  padding: 10px;
+  display:inline-block;
+  background: SandyBrown;
+  color: rgb(161,24,38);
+  text-decoration: none; /* sto eliminando la sottolineatura del link */
+  font-family: Raleway, Josefin Sans;
+  font-size: 200%
+}
+
+.cover_button a:hover
+{
+  background: Wheat;
+}
+
+/*scritta centrale sullo sfondo*/
+.cover_copy h2
+{
+  display: inline-block;
+  padding: 10px;
+  color: SandyBrown;
+  border-radius: 35px;
+}
+
+
+/*--------------------------------------
+CARDS
+--------------------------------------*/
+
+.cards /*elemento contenitore di cards.
+         questo spazio è destinato alle cards e
+         tramite questo blocco posso modificare le regole
+         di questo spazio*/
+{
+  /* per averlo al centro sotto lo sfondo */
+  /*border: 2px solid blue; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  max-width: 1200px;
+  margin: 40px auto;  /*Top+Bot, Left+Right*/
+  padding: 0px;
+  display: flex; /*facciamo diventare il .cardS un flex-container*/
+
+}
+
+.card /* figli del contenitore flex*/
+{
+  width: 30%;
+  margin: 0 1.5%;
+  background: #fff; /*bianco*/
+}
+
+.card_image /*caratteristiche dell'immagine per tutte le card*/
+{
+  width:100%;
+  height: auto;
+}
+
+.card_copy /*caratteristiche della scritta per tutte le card
+             da questo blocco possiamo modificare lo stile
+             e le caratteristiche delle scritte*/
+{
+  padding: 5px 20px;
+}
+
+.card_copy h3 /*grazie al SELETTORE DISCENDENTE andiamo a modificare solo h3*/
+{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.card_copy h4
+{
+  margin-top: 0px;
+  text-align: center;
+}
+
+/*-------------------------------
+BANNER
+-------------------------------*/
+
+.banner
+{
+  height: 50%;
+  background: #fff;
+  /*border: 2px solid brown; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  display: flex;
+}
+
+.banner_image
+{
+  width:35%;
+  height: 100%;
+  /*border: 2px solid midnightblue; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  background-image: url(https://static.gibson.com/gibson-web/home/2021.01/01.06.2021_MesaBoogieHomepage.jpg);
+  background-size: cover;
+  position: relative;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  background-position: center center;
+}
+
+.banner_copy
+{
+  width:70%;
+  height: 100.5%;
+  /*border: 2px solid orange; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  display: table;
+}
+
+.banner_copy_text
+{
+  /*centrare verticalmente il contenuto*/
+  display: table-cell;
+  vertical-align: middle;
+  padding: 30px;
+}
+
+/* Grazie al nuovo <div class="banner_copy_text">
+   utilizziamo il SELETTORE DISCENDENTE per lavorare
+   su tutti i tag di testo presenti, a mio piacimento */
+.banner_copy_text h3
+{
+  font-size: 36px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+#uno
+{
+  font-size: 20px;
+  margin: 50px 0 -10px 0;
+
+}
+
+#due
+{
+  font-size: 20px;
+  margin: -20px 0 0 0;
+}
+
+
+/*-------------------------------
+FOOTER
+-------------------------------*/
+.footer
+{
+/*border: 2px solid green; questo lo uso solo per visualizzare cosa sto modificando a schermo*/
+  background-color: SaddleBrown;
+  color: DarkGoldenRod;
+  padding: 30px;
+  display: block;
+  margin-top: 40px;
+}
+
+
+
+
+
+/*-------------
+MEDIA QUERY
+-------------*/
+
+/*-------------------------------
+Tablet
+-------------------------------*/
+@media (max-width: 998px)
+{
+
+}
+
+
+/*-------------------------------
+Smartphone
+------------------------------*/
+@media (max-width: 767px)
+{
+  /*--------------------------------------
+  HEADER
+  --------------------------------------*/
+
+  /* per avere il menù fisso mentre scrolliamo la pagina da mobile */
+  .header
+  {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .header_icon-menu
+  {
+    display: block;
+  }
+
+  #header_menu-flex_container /* Contenitore Flex = header_menu*/
+  {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow:hidden;
+  }
+
+  .header_menu_item a
+  {
+    position: relative;
+    top: 100px;
+  }
+
+  /*--------------------------------------
+  COVER
+  --------------------------------------*/
+  .cover
+  {
+    height: 100%;
+  }
+
+  /*--------------------------------------
+  CARD
+  --------------------------------------*/
+
+  .cards
+  {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card
+  {
+  width: 90%;
+  margin:5%;
+  }
+
+  /*--------------------------------------
+  BANNER
+  --------------------------------------*/
+  .banner
+  {
+    display: flex;
+    flex-direction: column;
+    height: 110%;
+  }
+
+  .banner_image,
+  .banner_copy
+  {
+    width:100%;
+    height: 50%;
+  }
+
+}
